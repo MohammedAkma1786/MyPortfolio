@@ -445,4 +445,8 @@ section {
   .contact-me a {
     border-bottom: 2px solid var(--main-color);
   }
+  .text-animation span::after {
+    width: calc(100% + 8px);
+    height: calc(100% + 12px);
+  }
 }
