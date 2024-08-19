@@ -71,29 +71,29 @@ section {
 }
 .home {
   display: flex;
-  align-items: center; /* Vertically centers the content and image */
-  justify-content: space-between; /* Ensures even spacing between the content and the image */
-  gap: 3rem; /* Adjusts the space between the text and image */
-  padding: 10rem 12%; /* Padding to provide space within the section */
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 10rem 12%;
 }
 
 .home-content {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertically centers the text */
-  max-width: 50%; /* Restricts the width of the content to allow space for the image */
-  margin-top: 0; /* Ensures no additional space above the content */
+  justify-content: center;
+  max-width: 50%;
+  margin-top: 0;
 }
 
 .home-img {
-  max-width: 40%; /* Ensures the image does not take up too much space */
+  max-width: 40%;
   display: flex;
-  justify-content: center; /* Centers the image within its container */
-  align-items: center; /* Vertically centers the image */
+  justify-content: center;
+  align-items: center;
 }
 
 .home-img img {
-  width: 100%; /* Ensures the image scales to the container's width */
+  width: 100%;
   border-radius: 25%;
   box-shadow: 0 0 25px var(--main-color);
   cursor: pointer;
@@ -116,7 +116,7 @@ section {
   font-size: 6rem;
   font-weight: 700;
   line-height: 1;
-  margin-top: 0; /* Ensures the heading aligns correctly with other content */
+  margin-top: 0;
 }
 
 .home-content {
@@ -128,7 +128,6 @@ section {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-
   width: 4.5rem;
   height: 4.5rem;
   background: transparent;
@@ -235,9 +234,9 @@ section {
 .skills-logo {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centers the content */
+  justify-content: center;
   align-items: center;
-  gap: 6rem; /* Space between the items */
+  gap: 6rem;
   margin-top: 7rem;
 }
 
@@ -249,8 +248,8 @@ section {
   transition: 0.3s ease-in-out;
   border-radius: 25%;
   display: flex;
-  justify-content: center; /* Center the icon inside the box */
-  align-items: center; /* Center the icon inside the box */
+  justify-content: center;
+  align-items: center;
 }
 
 .skills-logo a:hover {
@@ -260,7 +259,6 @@ section {
   background-color: var(--second-bg-color);
 }
 
-/* Optional: Control the width of the container to avoid stretching too wide */
 .skills {
   max-width: 80%;
   margin: 0 auto;
@@ -274,17 +272,17 @@ section {
   background-color: rgb(24, 20, 20);
   height: 200px;
   display: flex;
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
+  justify-content: center;
+  align-items: center;
   font-size: 16px;
-  flex-direction: column; /* Stacks items vertically */
-  text-align: center; /* Centers text within the section */
+  flex-direction: column;
+  text-align: center;
 }
 
 .contact-me {
   display: flex;
-  justify-content: center; /* Centers items horizontally */
-  align-items: center; /* Centers items vertically */
+  justify-content: center;
+  align-items: center;
 }
 .contact-me a {
   padding: 20px 40px;
@@ -303,4 +301,44 @@ section {
   align-items: center;
   margin-top: 1rem;
   margin-top: 20px;
+}
+.project-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.description h3 {
+  margin: 0;
+  font-size: 4.5rem;
+  position: sticky;
+}
+
+.description p {
+  margin: 0;
+  font-size: 2rem;
+}
+.imgWeb {
+  width: 550px;
+  height: auto;
+  cursor: pointer;
+  position: relative;
+  border: 10px;
+}
+
+.imgWeb.expanded {
+  transform: scale(4);
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2.8);
+  background: rgba(0, 0, 0, 0);
 }
