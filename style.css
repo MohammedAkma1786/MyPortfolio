@@ -412,7 +412,10 @@ section {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-
+  .home {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   .home-content {
     max-width: 100%;
     text-align: center;
@@ -430,9 +433,6 @@ section {
     animation: alternate;
   }
 
-  .home-img {
-    display: none;
-  }
   .project-card {
     flex-direction: column;
   }
