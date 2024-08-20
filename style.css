@@ -418,6 +418,17 @@ section {
     text-align: center;
     padding: 1rem;
   }
+  home-content h1 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+  .text-animation {
+    font-size: 2rem;
+  }
+  .text-animation span::after {
+    position: relative;
+    animation: alternate;
+  }
 
   .home-img {
     display: none;
@@ -445,8 +456,16 @@ section {
   .contact-me a {
     border-bottom: 2px solid var(--main-color);
   }
-  .text-animation span::after {
-    width: calc(100% + 8px);
-    height: calc(100% + 12px);
+  .headingskills {
+    font-size: 4rem;
+  }
+  .contact-me a {
+    width: 100%;
+    overflow-x: hidden;
+    font-size: 12px;
+    display: flex;
+    text-align: center;
+    padding: 20px 12px;
+    justify-content: center;
   }
 }
