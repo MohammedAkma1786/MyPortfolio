@@ -83,7 +83,7 @@ body {
 
 /* Sections */
 section {
-  min-height: 100vh;
+  min-height: 70vh;
   padding: 10rem 12% 10rem;
 }
 .home {
@@ -239,6 +239,7 @@ section {
   margin: 0 5rem;
   border-left: 3px solid var(--main-color);
   border-right: 3px solid var(--main-color);
+  margin-top: 30px;
 }
 .headingskills span {
   color: var(--main-color);
@@ -248,7 +249,7 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 6rem;
+  gap: 20rem;
   margin-top: 7rem;
 }
 .skills-logo a {
@@ -270,6 +271,11 @@ section {
 }
 
 /* Projects Section */
+.projects-container {
+  margin-top: 60px;
+  border: var(--second-bg-color), solid;
+  padding: 10px 10px;
+}
 .heading {
   font-size: 8rem;
   text-align: center;
