@@ -114,8 +114,7 @@ section {
   transition: 0.4s ease-in-out;
 }
 .home-img img:hover {
-  box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color),
-    0 0 100px var(--main-color);
+  box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color), 0 0 100px var(--main-color);
 }
 .home-content h3 {
   margin-bottom: 2rem;
@@ -273,40 +272,97 @@ section {
 /* Projects Section */
 .projects-container {
   margin-top: 60px;
-  border: var(--second-bg-color), solid;
-  padding: 10px 10px;
+  border: 2px solid var(--second-bg-color);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  background-color: var(--second-bg-color);
+  transition: all 0.3s ease-in-out;
 }
+
+.projects-container:hover {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
 .heading {
   font-size: 8rem;
   text-align: center;
   margin: 5rem 0;
+  font-weight: 700;
+  color: var(--main-color);
 }
+
 .project-card {
   display: flex;
-  align-items: flex-start;
+  flex-wrap: nowrap;
   gap: 2rem;
+  background: #1a1a1a;
+  border-radius: 15px;
+  padding: 2rem;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.project-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
 .description {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 1rem;
+  width: 100%;
 }
+
 .description h3 {
   margin: 0;
-  font-size: 4.5rem;
-  position: sticky;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--main-color);
+  text-transform: uppercase;
 }
+
 .description p {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: var(--text-color);
 }
+
 .imgWeb {
-  width: 550px;
+  width: 500px;
   height: auto;
+  border-radius: 15px;
+  border: 2px solid var(--main-color);
+  transition: all 0.3s ease;
   cursor: pointer;
-  position: relative;
-  border: 10px;
+}
+
+.imgWeb:hover {
+  transform: scale(1.05); /* Subtle zoom on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styling for project cards */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .description h3 {
+    font-size: 2.5rem;
+  }
+
+  .description p {
+    font-size: 1.6rem;
+  }
+
+  .imgWeb {
+    width: 100%;
+    max-width: 350px; /* Further reduced image size for mobile */
+  }
 }
 
 /* Footer */
