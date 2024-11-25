@@ -1,21 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 * {
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  border: none;
-  outline: none;
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
 }
 :root {
   --bg-color: #080808;
   --second-bg-color: #131313;
   --text-color: white;
   --main-color: #5be584;
+  --border-radius: 12px;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --button-hover: #ff4747;
 }
 html {
-  font-size: 60%;
+  font-size: 62.5%;
   overflow-x: hidden;
   max-width: 100%;
 }
@@ -23,14 +25,12 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
-
-/* Header */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 4rem 12% 4rem;
+  padding: 2rem 12%;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   display: flex;
@@ -53,13 +53,13 @@ body {
 }
 .navbar {
   display: flex;
+  gap: 2rem;
 }
 .navbar a {
   font-size: 1.8rem;
   color: var(--text-color);
-  margin-left: 4rem;
   font-weight: 700;
-  transition: 0.3s ease;
+  transition: color 0.3s, border-bottom 0.3s;
   border-bottom: 3px solid transparent;
 }
 .navbar .homelogo {
@@ -80,23 +80,20 @@ body {
   cursor: pointer;
   z-index: 10;
 }
-
-/* Sections */
 section {
   min-height: 70vh;
-  padding: 10rem 12% 10rem;
+  padding: 8rem 12%;
 }
 .home {
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 3rem;
-  padding: 10rem 12%;
+  padding: 8rem 12%;
+  text-align: center;
 }
 .home-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   max-width: 50%;
   margin-top: 0;
 }
@@ -111,10 +108,10 @@ section {
   border-radius: 25%;
   box-shadow: 0 0 25px var(--main-color);
   cursor: pointer;
-  transition: 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out;
 }
 .home-img img:hover {
-  box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color), 0 0 100px var(--main-color);
+  box-shadow: 0 0 25px var(--main-color), 0 0 50px var (--main-color), 0 0 100px var(--main-color);
 }
 .home-content h3 {
   margin-bottom: 2rem;
@@ -126,13 +123,11 @@ section {
   line-height: 1;
   margin-top: 0;
 }
-.home-content {
+.home-content p {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.8;
 }
-
-/* Social Icons */
 .social-icons a {
   display: inline-flex;
   justify-content: center;
@@ -145,7 +140,7 @@ section {
   border-radius: 50%;
   color: var(--main-color);
   margin: 3rem 1.5rem 3rem 0;
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .social-icons a:hover {
   color: var(--text-color);
@@ -153,12 +148,12 @@ section {
   box-shadow: 0 0 25px var(--main-color);
   background-color: var(--main-color);
 }
-
-/* Text Animation */
 .text-animation {
-  font-size: 34px;
+  font-size: 3.4rem;
   font-weight: 600;
-  min-width: 280px;
+  min-width: 28rem;
+  position: relative;
+  overflow: hidden; /* Ensure content stays within bounds */
 }
 .text-animation span {
   position: relative;
@@ -172,10 +167,10 @@ section {
   content: "";
   background-color: var(--bg-color);
   position: absolute;
-  width: calc(100% + 8px);
-  height: calc(100% + 15px);
+  width: calc(100% + 0.8rem);
+  height: calc(100% + 1.5rem);
   border-left: 3px solid var(--bg-color);
-  right: -8px;
+  right: -0.8rem;
   animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
 }
 @keyframes cursor {
@@ -202,7 +197,7 @@ section {
   }
   81%,
   100% {
-    content: "Cloud support associate";
+    content: "Cloud Support Associate";
   }
 }
 @keyframes typing {
@@ -227,18 +222,17 @@ section {
   65%,
   80%,
   85% {
-    width: calc(100% + 8px);
+    width: calc(100% + 0.8rem);
   }
 }
 
-/* Skills Section */
 .headingskills {
   font-size: 8rem;
   text-align: center;
   margin: 0 5rem;
   border-left: 3px solid var(--main-color);
   border-right: 3px solid var(--main-color);
-  margin-top: 30px;
+  margin-top: 3rem;
 }
 .headingskills span {
   color: var(--main-color);
@@ -248,15 +242,15 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20rem;
+  gap: 5rem;
   margin-top: 7rem;
 }
 .skills-logo a {
   color: var(--text-color);
-  text-shadow: 0 0 5px var(--main-color);
-  font-size: 18rem;
+  text-shadow: 0 0 0.5rem var(--main-color);
+  font-size: 7rem;
   background: transparent;
-  transition: 0.3s ease-in-out;
+  transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
   border-radius: 25%;
   display: flex;
   justify-content: center;
@@ -265,25 +259,21 @@ section {
 .skills-logo a:hover {
   color: var(--main-color);
   transform: scale(1.3);
-  box-shadow: 0 0 25px var(--main-color);
+  box-shadow: 0 0 2.5rem var(--main-color);
   background-color: var(--second-bg-color);
 }
-
-/* Projects Section */
 .projects-container {
-  margin-top: 60px;
+  margin-top: 6rem;
   border: 2px solid var(--second-bg-color);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
   background-color: var(--second-bg-color);
-  transition: all 0.3s ease-in-out;
+  transition: box-shadow 0.3s;
 }
-
 .projects-container:hover {
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.3);
 }
-
 .heading {
   font-size: 8rem;
   text-align: center;
@@ -291,21 +281,18 @@ section {
   font-weight: 700;
   color: var(--main-color);
 }
-
 .project-card {
   display: flex;
   flex-wrap: nowrap;
   gap: 2rem;
   background: #1a1a1a;
-  border-radius: 15px;
+  border-radius: 1.5rem;
   padding: 2rem;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .project-card:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
 }
-
 .description {
   display: flex;
   flex-direction: column;
@@ -313,7 +300,6 @@ section {
   gap: 1rem;
   width: 100%;
 }
-
 .description h3 {
   margin: 0;
   font-size: 3.5rem;
@@ -330,17 +316,17 @@ section {
 }
 
 .imgWeb {
-  width: 500px;
+  width: 50rem;
   height: auto;
-  border-radius: 15px;
-  border: 2px solid var(--main-color);
+  border-radius: 1.5rem;
+  border: 0.2rem solid var(--main-color);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .imgWeb:hover {
   transform: scale(1.05); /* Subtle zoom on hover */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive styling for project cards */
@@ -361,51 +347,57 @@ section {
 
   .imgWeb {
     width: 100%;
-    max-width: 350px; /* Further reduced image size for mobile */
+    max-width: 35rem; /* Further reduced image size for mobile */
   }
 }
 
 /* Footer */
 #contact {
-  background-color: rgb(24, 20, 20);
-  height: 200px;
+  background-color: #181414;
+  height: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
+  font-size: 1.6rem;
   flex-direction: column;
   text-align: center;
 }
+
 .contact-me {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .contact-me a {
-  padding: 20px 40px;
-  color: white;
+  padding: 2rem 4rem;
+  color: var(--text-color);
   font-weight: 600;
+  border-bottom: 0.2rem solid transparent;
+  transition: color 0.3s, border-bottom 0.3s;
 }
+
 .contact-me a:hover {
   color: var(--main-color);
-  transition: 0.3s ease-in-out;
-  border-bottom: 1px solid var(--main-color);
+  border-bottom: 0.2rem solid var(--main-color);
 }
+
 .copy {
-  color: white;
+  color: var(--text-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 
 /* Media Queries for Mobile Devices */
 @media (max-width: 756px) {
-  html body {
+  html,
+  body {
     overflow-x: hidden;
     max-width: 100%;
   }
+
   .header {
     padding: 1.5rem 5%;
     flex-direction: column;
@@ -463,7 +455,7 @@ section {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 2px;
+    height: 0.2rem;
     background-color: var(--main-color);
     transform: scaleX(0);
     transform-origin: bottom right;
@@ -474,37 +466,65 @@ section {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-  .home {
-    display: flex;
-    flex-direction: column-reverse;
-  }
+
   .home-content {
     max-width: 100%;
-    text-align: center;
     padding: 1rem;
   }
-  home-content h1 {
+
+  .home-content h1 {
     font-size: 3rem;
     font-weight: 400;
   }
+
   .text-animation {
     font-size: 2rem;
-  }
-  .text-animation span::after {
     position: relative;
-    animation: alternate;
+    overflow: hidden;
+  }
+
+  .text-animation span::after {
+    width: calc(100% + 0.5rem);
+    height: calc(100% + 1.2rem);
+  }
+
+  @keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+      width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+      width: calc(100% + 0.5rem);
+    }
   }
 
   .project-card {
     flex-direction: column;
   }
+
   .skills-logo {
     gap: 2.5rem;
   }
 
   .skills-logo a {
     font-size: 7rem;
-    text-shadow: 0 0 14px var(--main-color);
+    text-shadow: 0 0 1.4rem var(--main-color);
   }
 
   .heading {
@@ -515,19 +535,18 @@ section {
     width: 100%;
     margin-top: 1rem;
   }
+
   .contact-me a {
-    border-bottom: 2px solid var(--main-color);
+    border-bottom: 0.2rem solid var(--main-color);
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 2rem 1.2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
   }
+
   .headingskills {
     font-size: 4rem;
-  }
-  .contact-me a {
-    width: 100%;
-    overflow-x: hidden;
-    font-size: 12px;
-    display: flex;
-    text-align: center;
-    padding: 20px 12px;
-    justify-content: center;
   }
 }
