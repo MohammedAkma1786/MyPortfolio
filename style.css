@@ -86,7 +86,7 @@ section {
 }
 .home {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 3rem;
@@ -124,7 +124,7 @@ section {
   margin-top: 0;
 }
 .home-content p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 500;
   line-height: 1.8;
 }
@@ -197,7 +197,7 @@ section {
   }
   81%,
   100% {
-    content: "Cloud Support Associate";
+    content: "Cloud Specialist";
   }
 }
 @keyframes typing {
@@ -466,7 +466,10 @@ section {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-
+  .home {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   .home-content {
     max-width: 100%;
     padding: 1rem;
@@ -476,7 +479,12 @@ section {
     font-size: 3rem;
     font-weight: 400;
   }
-
+  .home-content h3 {
+    font-size: 2rem;
+  }
+  .home-content p {
+    font-size: 1.5rem;
+  }
   .text-animation {
     font-size: 2rem;
     position: relative;
