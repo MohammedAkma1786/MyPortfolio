@@ -111,7 +111,8 @@ section {
   transition: box-shadow 0.4s ease-in-out;
 }
 .home-img img:hover {
-  box-shadow: 0 0 25px var(--main-color), 0 0 50px var (--main-color), 0 0 100px var(--main-color);
+  box-shadow: 0 0 25px var(--main-color), 0 0 50px var (--main-color),
+    0 0 100px var(--main-color);
 }
 .home-content h3 {
   margin-bottom: 2rem;
@@ -283,7 +284,9 @@ section {
 }
 .project-card {
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
   background: #1a1a1a;
   border-radius: 1.5rem;
@@ -296,7 +299,7 @@ section {
 .description {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: center;
   gap: 1rem;
   width: 100%;
 }
@@ -317,7 +320,7 @@ section {
 
 .imgWeb {
   width: 50rem;
-  height: auto;
+  height: fit-content;
   border-radius: 1.5rem;
   border: 0.2rem solid var(--main-color);
   transition: all 0.3s ease;
